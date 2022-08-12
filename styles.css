@@ -377,7 +377,7 @@ table, th, td {
     border-top: none;
 }
 #secondSign {
-    border: 1px solid black;
+    border: 2px solid black;
     width: 26%;
     margin-left: 6%;
     margin-bottom: 1%;
@@ -387,7 +387,7 @@ table, th, td {
     border-top: none;
 }
 #thirdSign{
-    border: 1px solid black;
+    border: 2px solid black;
     width: 26%;
     margin-left: 5%;
     margin-bottom: 1%;
