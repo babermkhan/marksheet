@@ -1,0 +1,374 @@
+body{
+    width: 77%;
+    margin: auto;
+    border-width: 5px;
+    border-style: double;
+    border-radius: 0.8em;
+}
+
+.header{
+    text-align: center;
+    font-family: sans-serif;
+}
+.demoSchoolName{
+    font-size: 33px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.address{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.reportCard{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.academicSession{
+    font-size: 14px;
+    font-weight: bold;
+}
+.headerInfo{
+    border: 1px solid black;
+    border-right: none;
+    border-left: none;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    height: 27px;
+    text-align: center;
+    background: #98cbff;
+    width: 93%;
+    margin: auto;
+}
+.topHeader{
+    background: #c5e6f3;
+    width: 93%;
+    margin: auto;
+}
+.contactNo{
+    float: left;
+    line-height: 27px;
+    font-family: sans-serif;
+    font-size: 13px;
+    padding-left: 40px;
+}
+.emailID{
+    vertical-align: sub;
+    font-family: sans-serif;
+    font-size: 13px;
+    padding-left: 27px;
+}
+.website{
+    float: right;
+    line-height: 27px;
+    font-family: sans-serif;
+    font-size: 13px;
+    padding-right: 50px;
+}
+.admissionNo{
+    display: flex;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 108px;
+}
+.rollNo{
+    margin-top: -17px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 558px;
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+.admission{
+    display: flex;
+    margin-top: -16px;
+    margin-left: 244px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.rollNoValue{
+    display: flex;
+    margin-top: -16px;
+    margin-right: 160px;
+    align-content: space-between;
+    flex-direction: row-reverse;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.studentName{
+    display: flex;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 106px;
+}
+.studentNameValue{
+    display: flex;
+    margin-top: -16px;
+    margin-left: 244px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.class{
+    margin-top: -17px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 541px;
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+}
+.className{
+    display: flex;
+    margin-top: -16px;
+    margin-right: 171px;
+    align-content: space-between;
+    flex-direction: row-reverse;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.fName{
+    display: flex;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 106px;
+}
+.fatherName{
+    display: flex;
+    margin-top: -16px;
+    margin-left: 244px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.section{
+    margin-top: -17px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 557px;
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+}
+.secName{
+    display: flex;
+    margin-top: -16px;
+    margin-right: 178px;
+    align-content: space-between;
+    flex-direction: row-reverse;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+hr{
+    height: 4PX;
+    background: black;
+    width: 93%;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    
+  }
+  th {
+    padding: 12px;
+  }
+  td {
+    padding: 6px;
+  }
+  .subNames{
+    font-family: sans-serif;
+    font-size: 18px;
+  }
+  .table{
+    margin: auto;
+    width: 85%;
+  }
+  .tblHeader{
+    font-family: sans-serif;
+    font-size: 15px;
+  }
+  .table thead{
+    background: #c5e6f3 !important;
+  }
+  /* form{
+    border-width: 5px;
+    border-style: double;
+    
+    border-radius: 0.8em;
+  } */
+  .centerCellText{
+    text-align: center;
+    font-family: sans-serif;
+  }
+  .subjects{
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+  .attendanceTable{
+    margin-top: 25px;
+    width: 40%;
+    display: inline-table;
+    margin-left: 35px;
+  }
+  .attendanceInfo{
+    background: #c5e6f3;
+  }
+  .gradingScaleTable {
+    display: inline-table;
+    width: 50%;
+    margin-left: 28px;
+  }
+  .gradingScaleTable thead{
+    background: #c5e6f3;
+  }
+  .marksRange, .grade, .gradeDescription{
+    background: #c5e6f3;
+    font-family: sans-serif;
+    padding: 6px;
+  }
+  .performanceTable{
+    width: 40%;
+    display: inline-table;
+    position: relative;
+    top: -145px;
+    left: 35px;
+  }
+  .date{
+    display: inline-block;
+    width: 50%;
+    position: relative;
+    right: 380px;
+  }
+  .date label{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  .calendar{
+    font-size: 18px;
+    font-family: sans-serif;
+  }
+  .hrOne{
+    height: 1px;
+    background: black;
+    width: 27%;
+    margin-left: 37px;
+    display: inline-block;
+    
+  }
+  .hrTwo{
+    display: inline-block;
+    
+    margin-left: 58px;
+    height: 1px;
+    background: black;
+    width: 27%;
+  }
+  .hrThree{
+    display: inline-block;
+    
+    margin-left: 45px;
+    height: 1px;
+    background: black;
+    width: 27%;
+  }
+  .parentSign{
+    margin-bottom: 19px;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 100px;
+  }
+  .teacherSign{
+    margin-bottom: 19px;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 171px;
+  }
+  .principalSign{
+    margin-bottom: 19px;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 146px;
+  }
+  #logo{
+    display: inline-block;
+    width: 7%;
+    position: absolute;
+    left: 231px;
+    top: 12px;
+  }
+  .alert, .alert40 {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    top: 85%;
+    position: absolute;
+    right: 45%;
+    
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+  .finalTotalColor{
+    background: #c5e6f3
+  }
+  .allSubTotal{
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.finalTotalColor td{
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+#abKhan{
+    position: absolute;
+    left: 38px;
+    top: 108px;
+    width: 210px; 
+}
+#nomanKhan{
+    position: absolute;
+    left: 400px;
+    top: 91px;
+    width: 161px;   
+}
+#masoodAhmed{
+    position: absolute;
+    left: 722PX;
+    top: 107px;
+    width: 161px; 
+}
+.sign{
+  display: none;
+}

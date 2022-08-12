@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Sheet</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+      <div class="alert">
+        <strong>Alert!</strong> Range is 0 to 30
+      </div>
+
+      <div class="alert40">
+        <strong>Alert!</strong> Range is 0 to 40
+      </div>
+
+      <!-- <div class="invalid">
+        <strong>Alert!</strong> Enter only numbers
+      </div> -->
+
+        <div class="topHeader">
+            <img src="./logo.png" id="logo">
+            <div class="header demoSchoolName">Demo Public School</div>
+            
+            <div class="header address">Norh Nazimabad, Karachi, Sindh</div>
+            <div class="header reportCard">REPORT CARD FOR FINAL EXAMINATION</div>
+            <div class="header academicSession">Academic Session : 2021-22</div>
+        </div>
+        <div class="headerInfo">
+            <span class="contactNo">Contact No : (021)-12345678</span>
+            <span class="emailID">Email ID : baberkhan1@gmail.com</span>
+            <span class="website">Website : https://www.abcd.com</span><br><br>
+        </div>
+     
+            <label class="admissionNo">Admission No. : </label>
+            <span class="admission">STD0058</span>
+            <label class="rollNo">Roll No. : </label>
+            <span class="rollNoValue">5006</span>
+
+            <label class="studentName">Student's Name :</label>
+            <span class="studentNameValue">BABER KHAN</span>
+            <label class="class">Class : </label>
+            <span class="className">5th</span>
+
+            <label class="fName">Father's Name : </label>
+            <span class="fatherName">ABDUL MAJEED KHAN</span>
+            <label class="section">Section : </label>
+            <span class="secName">A</span><br>
+
+            <hr>
+            <form onkeyup="check(); return false;">
+             <table class="table">
+                <thead>
+                    <tr>
+                        <th class="subNames">Subject Name</th>
+                        <th class="tblHeader">Term 1 <br> (30)</th>
+                        <th class="tblHeader">Term 2 <br> (30)</th>
+                        <th class="tblHeader">Final Term <br>(40)</th>
+                        <th class="tblHeader">Total <br>(100)</th>
+                        <th class="tblHeader">Percent <br>(%)</th>
+                        <th class="tblHeader">Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="subjects">English</td>
+                        <td class="centerCellText" contenteditable="true" id="term1Eng"></td>
+                        <td class="centerCellText" contenteditable="true" id="term2Eng"></td>
+                        <td class="centerCellText" contenteditable="true" id="finalEng"></td>
+                        <td class="centerCellText" id="totalEng"></td>
+                        <td class="centerCellText" id="percentEng"></td>
+                        <td class="centerCellText" id="gradePercentEnglish"></td>
+                    </tr>
+                    <tr>
+                        <td class="subjects">Urdu</td>
+                        <td class="centerCellText" contenteditable="true" id="term1Urdu"></td>
+                        <td class="centerCellText" contenteditable="true" id="term2Urdu"></td>
+                        <td class="centerCellText" contenteditable="true" id="finalUrdu"></td>
+                        <td class="centerCellText" id="totalUrd"></td>
+                        <td class="centerCellText" id="percentUrdu"></td>
+                        <td class="centerCellText" id="gradePercentUrdu"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="subjects">Sindhi</td>
+                        <td class="centerCellText" contenteditable="true" id="term1Sindhi"></td>
+                        <td class="centerCellText" contenteditable="true" id="term2Sindhi"></td>
+                        <td class="centerCellText" contenteditable="true" id="finalSindhi"></td>
+                        <td class="centerCellText" id="totalSindhi"></td>
+                        <td class="centerCellText" id="percentSindhi"></td>
+                        <td class="centerCellText" id="gradePercentSindhi"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="subjects">Mathematics</td>
+                        <td class="centerCellText" contenteditable="true" id="term1Math"></td>
+                        <td class="centerCellText" contenteditable="true" id="term2Math"></td>
+                        <td class="centerCellText" contenteditable="true" id="finalMath"></td>
+                        <td class="centerCellText" id="totalMath"></td>
+                        <td class="centerCellText" id="percentMath"></td>
+                        <td class="centerCellText" id="gradePercentMath"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="subjects">Islamiat</td>
+                        <td class="centerCellText" contenteditable="true" id="term1Islamiat"></td>
+                        <td class="centerCellText" contenteditable="true" id="term2Islamiat"></td>
+                        <td class="centerCellText" contenteditable="true" id="finalIslamiat"></td>
+                        <td class="centerCellText" id="totalIslamiat"></td>
+                        <td class="centerCellText" id="percentIslamiat"></td>
+                        <td class="centerCellText" id="gradePercentIslamiat"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="subjects">Science</td>
+                        <td class="centerCellText" contenteditable="true" id="term1Science"></td>
+                        <td class="centerCellText" contenteditable="true" id="term2Science"></td>
+                        <td class="centerCellText" contenteditable="true" id="finalScience"></td>
+                        <td class="centerCellText" id="totalScience"></td>
+                        <td class="centerCellText" id="percentScience"></td>
+                        <td class="centerCellText" id="gradePercentScience"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="subjects">Pakistan Studies</td>
+                        <td class="centerCellText" contenteditable="true" id="term1Pakstu"></td>
+                        <td class="centerCellText" contenteditable="true" id="term2Pakstu"></td>
+                        <td class="centerCellText" contenteditable="true" id="finalPakstu"></td>
+                        <td class="centerCellText" id="totalPakStu"></td>
+                        <td class="centerCellText" id="percentPakStu"></td>
+                        <td class="centerCellText" id="gradePercentPakStu"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="subjects">History</td>
+                        <td class="centerCellText" contenteditable="true" id="term1History"></td>
+                        <td class="centerCellText" contenteditable="true" id="term2History"></td>
+                        <td class="centerCellText" contenteditable="true" id="finalHistory"></td>
+                        <td class="centerCellText" id="totalHistory"></td>
+                        <td class="centerCellText" id="percentHistory"></td>
+                        <td class="centerCellText" id="gradePercentHistory"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="subjects">Computer Studies</td>
+                        <td class="centerCellText" contenteditable="true" id="term1CompStu"></td>
+                        <td class="centerCellText" contenteditable="true" id="term2CompStu"></td>
+                        <td class="centerCellText" contenteditable="true" id="finalCompStu"></td>
+                        <td class="centerCellText" id="totalCompStu"></td>
+                        <td class="centerCellText" id="percentCompStu"></td>
+                        <td class="centerCellText" id="gradePercentCompStu"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="subjects">Art and Craft</td>
+                        <td class="centerCellText" contenteditable="true" id="term1ArtCraft"></td>
+                        <td class="centerCellText" contenteditable="true" id="term2ArtCraft"></td>
+                        <td class="centerCellText" contenteditable="true" id="finalArtCraft"></td>
+                        <td class="centerCellText" id="totalArtCraft"></td>
+                        <td class="centerCellText" id="percentArtCraft"></td>
+                        <td class="centerCellText" id="gradePercentArtCraft"></td>
+                    </tr>
+
+                    <tr class="finalTotalColor">
+                        <td class="allSubTotal">Total</td>
+                        <td class="allSubTotal term1Total" id="termTotal1"></td>
+                        <td class="allSubTotal term2Total"></td>
+                        <td class="allSubTotal term3Total"></td>
+                        <td class="allSubTotal alltermsTotalMarks"></td>
+                        <td class="allSubTotal allTermsTotalPercentage"></td>
+                        <td class="allSubTotal" id="finalGrade"></td>
+                    </tr>
+                </tbody>
+             </table>
+
+             <table class="attendanceTable">
+                <thead>
+                    <tr>
+                        <th colspan = "2" class="subNames attendanceInfo">Attendance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="subjects">Total Working Days</td>
+                        <td class="centerCellText" id="workingDays">260</td>
+                    </tr>
+                    <tr>
+                        <td class="subjects">No. of days present</td>
+                        <td class="centerCellText" contenteditable="true" id="NoOfDays"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="subjects">Attendance Percentage</td>
+                        <td class="centerCellText" id="attendancePercentage"></td>
+                    </tr>
+                </tbody>
+             </table>
+
+             <table class="gradingScaleTable">
+                <thead>
+                    <tr>
+                        <th colspan = "3" class="subNames">Grading scale for scholastic Marks Range</th>
+                    </tr>
+                    <tr>
+                        <th class="marksRange">Marks Range</th>
+                        <th class="grade">Grade</th>
+                        <th class="gradeDescription">Grade Description</th>
+                    </tr>
+                   
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="centerCellText">80 - 100</td>
+                        <td class="centerCellText" >A1</td>
+                        <td class="centerCellText" >Outstanding</td>
+                    </tr>
+                    <tr>
+                        <td class="centerCellText">70 - 79</td>
+                        <td class="centerCellText">A</td>
+                        <td class="centerCellText">Excellent</td>
+                    </tr>
+
+                    <tr>
+                        <td class="centerCellText">60 - 69</td>
+                        <td class="centerCellText">B</td>
+                        <td class="centerCellText">Very Good</td>
+                    </tr>
+                    <tr>
+                        <td class="centerCellText">50 - 59</td>
+                        <td class="centerCellText">C</td>
+                        <td class="centerCellText">Good</td>
+                    </tr>
+                    <tr>
+                        <td class="centerCellText">40 - 49</td>
+                        <td class="centerCellText">D</td>
+                        <td class="centerCellText">Fair</td>
+                    </tr>
+                    <tr>
+                        <td class="centerCellText">33 - 39</td>
+                        <td class="centerCellText">E</td>
+                        <td class="centerCellText">Satisfactory</td>
+                    </tr>
+                    <tr>
+                        <td class="centerCellText">0 - 32</td>
+                        <td class="centerCellText">F</td>
+                        <td class="centerCellText">Fail</td>
+                    </tr>
+                </tbody>
+             </table>
+
+
+             <table class="performanceTable">
+                <thead>
+                    <tr>
+                        <th colspan = "2" class="subNames attendanceInfo">Performance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="subjects">Marks Percentage</td>
+                        <td class="centerCellText"id="marksPercentage"></td>
+                    </tr>
+                    <tr>
+                        <td class="subjects">Performance</td>
+                        <td class="centerCellText" id="totalPerformance"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="subjects">Class Teacher's Remarks</td>
+                        <td class="centerCellText" id="teacherRemarks"></td>
+                    </tr>
+                </tbody>
+             </table>
+            <div class="date">  
+             <label>Date : </label>
+             <span class="calendar">10-Aug-2022</span>
+             <img src="./Abkhan.png" alt="" id="abKhan" class="sign">
+             <img src="./Noman.png" alt="" id="nomanKhan" class="sign">
+             <img src="./Masood.png" alt="" id="masoodAhmed" class="sign">
+            </div>
+            
+            <hr class="hrOne">
+            <hr class="hrTwo">
+            <hr class="hrThree">
+            
+            <span class="parentSign">Parent's Signature</span>
+            <span class="teacherSign">Class Teacher's Signature</span>
+            <span class="principalSign">Principal's Signature</span>
+        </form>
+
+        <script>
+            function check(){
+            let termOneEng = +document.querySelector("#term1Eng").innerText;    
+            let termTwoEng = +document.querySelector ("#term2Eng").innerText;
+            let finalEng = +document.querySelector("#finalEng").innerText;
+
+            let termOneUrdu = +document.querySelector("#term1Urdu").innerText;
+            let termTwoUrdu = +document.querySelector("#term2Urdu").innerText;
+            let finalUrdu = +document.querySelector("#finalUrdu").innerText;
+
+            let termOneSindhi = +document.querySelector("#term1Sindhi").innerText;
+            let termTwoSindhi = +document.querySelector("#term2Sindhi").innerText;
+            let finalSindhi = +document.querySelector("#finalSindhi").innerText;
+
+            let termOneMath = +document.querySelector("#term1Math").innerText;
+            let termTwoMath = +document.querySelector("#term2Math").innerText;
+            let finalMath = +document.querySelector("#finalMath").innerText;
+
+            let termOneIslamiat = +document.querySelector ("#term1Islamiat").innerText;
+            let termTwoIslamiat = +document.querySelector ("#term2Islamiat").innerText;
+            let finalIslamiat = +document.querySelector ("#finalIslamiat").innerText;
+
+            let termOneScience = +document.querySelector ("#term1Science").innerText;
+            let termTwoScience = +document.querySelector ("#term2Science").innerText;
+            let finalScience = +document.querySelector ("#finalScience").innerText;
+
+            let termOnePakstu = +document.querySelector ("#term1Pakstu").innerText;
+            let termTwoPakstu = +document.querySelector ("#term2Pakstu").innerText;
+            let finalPakstu = +document.querySelector ("#finalPakstu").innerText;
+
+            let termOneHistory = +document.querySelector ("#term1History").innerText;
+            let termTwoHistory = +document.querySelector ("#term2History").innerText;
+            let finalHistory = +document.querySelector ("#finalHistory").innerText;
+
+            let termOneCompStu = +document.querySelector ("#term1CompStu").innerText;
+            let termTwoCompStu = +document.querySelector ("#term2CompStu").innerText;
+            let finalCompStu = +document.querySelector ("#finalCompStu").innerText;
+
+            let termOneArtCraft = +document.querySelector ("#term1ArtCraft").innerText;
+            let termTwoArtCraft = +document.querySelector ("#term2ArtCraft").innerText;
+            let finalArtCraft = +document.querySelector ("#finalArtCraft").innerText;
+         
+            
+            // Total
+            let totalEnglish = termOneEng + termTwoEng + finalEng;
+            let totalUrdu = termOneUrdu + termTwoUrdu + finalUrdu;
+            let totalSindhi = termOneSindhi + termTwoSindhi + finalSindhi;
+            let totalMath = termOneMath + termTwoMath + finalMath;
+            let totalIslamiat = termOneIslamiat + termTwoIslamiat + finalIslamiat;
+            let totalScience = termOneScience + termTwoScience + finalScience;
+            let totalPakstu = termOnePakstu + termTwoPakstu + finalPakstu;
+            let totalHistory = termOneHistory + termTwoHistory + finalHistory;
+            let totalCompstu = termOneCompStu + termTwoCompStu + finalCompStu;
+            let totalArtCraft = termOneArtCraft + termTwoArtCraft + finalArtCraft;
+
+             // Percentage in Row
+            let percentEnglish = +((totalEnglish /100) * 100).toFixed(2);
+            let percentUrdu = +((totalUrdu /100) * 100).toFixed(2);
+            let percentSindhi = +((totalSindhi /100) * 100).toFixed(2);
+            let percentMath = +((totalMath /100) * 100).toFixed(2);
+            let percentIslamiat = +((totalIslamiat /100) * 100).toFixed(2);
+            let percentScience = +((totalScience /100) * 100).toFixed(2);
+            let percentPakStu = +((totalPakstu /100) * 100).toFixed(2);
+            let percentHistory = +((totalHistory /100) * 100).toFixed(2);
+            let percentCompStu = +((totalCompstu /100) * 100).toFixed(2);
+            let percentArtCraft = +((totalArtCraft /100) * 100).toFixed(2);
+
+            // if(isNaN(termOneEng)){
+            //     termOneEng = 0;
+            // }
+            // else if(isNaN(termOneUrdu)){
+            //     termOneUrdu = 0;
+            // }
+
+            // Term 1 Total
+            let totalTerm1 = termOneEng + termOneUrdu + termOneSindhi + termOneMath + termOneIslamiat+ termOneScience + termOnePakstu + termOneHistory + termOneCompStu + termOneArtCraft;
+            document.querySelector (".term1Total").innerText =totalTerm1 ;
+                    
+            
+            // Term 2 Total
+            let totalTerm2 = termTwoEng + termTwoUrdu + termTwoSindhi + termTwoMath + termTwoIslamiat + termTwoScience + termTwoPakstu + termTwoHistory + termTwoCompStu + termTwoArtCraft;
+            document.querySelector (".term2Total").innerText =totalTerm2 ;
+            // Term 3 Total
+            let totalTerm3 = finalEng + finalUrdu + finalSindhi + finalMath + finalIslamiat + finalScience + finalPakstu + finalHistory + finalCompStu + finalArtCraft;
+            document.querySelector (".term3Total").innerText =totalTerm3 ;
+            // All Terms Total Marks
+            let allTermsTotalMarks = totalEnglish + totalUrdu + totalSindhi + totalMath + totalIslamiat + totalScience + totalPakstu + totalHistory + totalCompstu + totalArtCraft;
+
+            // All Terms Total Percentage
+            let allTermsTotalPercentage = percentEnglish + percentUrdu + percentSindhi + percentMath + percentIslamiat + percentScience + percentPakStu + percentHistory + percentCompStu + percentArtCraft;
+
+            document.querySelector(".alltermsTotalMarks").innerText = allTermsTotalMarks;
+
+            document.querySelector(".allTermsTotalPercentage").innerText = ((allTermsTotalPercentage / 1000) * 100).toFixed(2) +`${"%"}`;
+
+            let totalWorkingDays = +document.querySelector("#workingDays").innerText;
+            let numOfDaysPresent = +document.querySelector("#NoOfDays").innerText;    
+            let attendancePercentage = (numOfDaysPresent / totalWorkingDays) * 100;
+            document.querySelector("#attendancePercentage").innerText = attendancePercentage.toFixed(2) +`${"%"}`;
+
+            // For Alphabets validatoin
+
+            if(isNaN(termOneEng)){
+                document.querySelector("#term1Eng").innerText =  "";
+                document.querySelector("#totalEng").innerText =  "";
+                document.querySelector("#percentEng").innerText =  "";
+                document.querySelector("#gradePercentEnglish").innerText =  "";
+                document.querySelector("#termTotal1").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                
+                return false;
+            }
+            else if(isNaN(termTwoEng)){
+                document.querySelector("#term2Eng").innerText =  "";
+                document.querySelector("#totalEng").innerText =  "";
+                document.querySelector("#percentEng").innerText =  "";
+                document.querySelector("#gradePercentEnglish").innerText =  "";
+                document.querySelector(".term2Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                
+                return false;
+            }
+            else if(isNaN(finalEng)){
+                document.querySelector("#finalEng").innerText =  "";
+                document.querySelector("#totalEng").innerText =  "";
+                document.querySelector("#percentEng").innerText =  "";
+                document.querySelector("#gradePercentEnglish").innerText =  "";
+                document.querySelector(".term3Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termOneUrdu)){
+                document.querySelector("#term1Urdu").innerText =  "";
+                document.querySelector("#totalUrd").innerText =  "";
+                document.querySelector("#percentUrdu").innerText =  "";
+                document.querySelector("#gradePercentUrdu").innerText =  "";
+                document.querySelector("#termTotal1").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termTwoUrdu)){
+                document.querySelector("#term2Urdu").innerText =  "";
+                document.querySelector("#totalUrd").innerText =  "";
+                document.querySelector("#percentUrdu").innerText =  "";
+                document.querySelector("#gradePercentUrdu").innerText =  "";
+                document.querySelector(".term2Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(finalUrdu)){
+                document.querySelector("#finalUrdu").innerText =  "";
+                document.querySelector("#totalUrd").innerText =  "";
+                document.querySelector("#percentUrdu").innerText =  "";
+                document.querySelector("#gradePercentUrdu").innerText =  "";
+                document.querySelector(".term3Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termOneSindhi)){
+                document.querySelector("#term1Sindhi").innerText =  "";
+                document.querySelector("#totalSindhi").innerText =  "";
+                document.querySelector("#percentSindhi").innerText =  "";
+                document.querySelector("#gradePercentSindhi").innerText =  "";
+                document.querySelector("#termTotal1").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termTwoSindhi)){
+                document.querySelector("#term2Sindhi").innerText =  "";
+                document.querySelector("#totalSindhi").innerText =  "";
+                document.querySelector("#percentSindhi").innerText =  "";
+                document.querySelector("#gradePercentSindhi").innerText =  "";
+                document.querySelector(".term2Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(finalSindhi)){
+                document.querySelector("#finalSindhi").innerText =  "";
+                document.querySelector("#totalSindhi").innerText =  "";
+                document.querySelector("#percentSindhi").innerText =  "";
+                document.querySelector("#gradePercentSindhi").innerText =  "";
+                document.querySelector(".term3Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termOneMath)){
+                document.querySelector("#term1Math").innerText =  "";
+                document.querySelector("#totalMath").innerText =  "";
+                document.querySelector("#percentMath").innerText =  "";
+                document.querySelector("#gradePercentMath").innerText =  "";
+                document.querySelector("#termTotal1").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termTwoMath)){
+                document.querySelector("#term2Math").innerText =  "";
+                document.querySelector("#totalMath").innerText =  "";
+                document.querySelector("#percentMath").innerText =  "";
+                document.querySelector("#gradePercentMath").innerText =  "";
+                document.querySelector(".term2Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(finalMath)){
+                document.querySelector("#finalMath").innerText =  "";
+                document.querySelector("#totalMath").innerText =  "";
+                document.querySelector("#percentMath").innerText =  "";
+                document.querySelector("#gradePercentMath").innerText =  "";
+                document.querySelector(".term3Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termOneIslamiat)){
+                document.querySelector("#term1Islamiat").innerText =  "";
+                document.querySelector("#totalIslamiat").innerText =  "";
+                document.querySelector("#percentIslamiat").innerText =  "";
+                document.querySelector("#gradePercentIslamiat").innerText =  "";
+                document.querySelector("#termTotal1").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termTwoIslamiat)){
+                document.querySelector("#term2Islamiat").innerText =  "";
+                document.querySelector("#totalIslamiat").innerText =  "";
+                document.querySelector("#percentIslamiat").innerText =  "";
+                document.querySelector("#gradePercentIslamiat").innerText =  "";
+                document.querySelector(".term2Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(finalIslamiat)){
+                document.querySelector("#finalIslamiat").innerText =  "";
+                document.querySelector("#totalIslamiat").innerText =  "";
+                document.querySelector("#percentIslamiat").innerText =  "";
+                document.querySelector("#gradePercentIslamiat").innerText =  "";
+                document.querySelector(".term3Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termOneScience)){
+                document.querySelector("#term1Science").innerText =  "";
+                document.querySelector("#totalScience").innerText =  "";
+                document.querySelector("#percentScience").innerText =  "";
+                document.querySelector("#gradePercentScience").innerText =  "";
+                document.querySelector("#termTotal1").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termTwoScience)){
+                document.querySelector("#term2Science").innerText =  "";
+                document.querySelector("#totalScience").innerText =  "";
+                document.querySelector("#percentScience").innerText =  "";
+                document.querySelector("#gradePercentScience").innerText =  "";
+                document.querySelector(".term2Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(finalScience)){
+                document.querySelector("#finalScience").innerText =  "";
+                document.querySelector("#totalScience").innerText =  "";
+                document.querySelector("#percentScience").innerText =  "";
+                document.querySelector("#gradePercentScience").innerText =  "";
+                document.querySelector(".term3Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termOnePakstu)){
+                document.querySelector("#term1Pakstu").innerText =  "";
+                document.querySelector("#totalPakStu").innerText =  "";
+                document.querySelector("#percentPakStu").innerText =  "";
+                document.querySelector("#gradePercentPakStu").innerText =  "";
+                document.querySelector("#termTotal1").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termTwoPakstu)){
+                document.querySelector("#term2Pakstu").innerText =  "";
+                document.querySelector("#totalPakStu").innerText =  "";
+                document.querySelector("#percentPakStu").innerText =  "";
+                document.querySelector("#gradePercentPakStu").innerText =  "";
+                document.querySelector(".term2Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(finalPakstu)){
+                document.querySelector("#finalPakstu").innerText =  "";
+                document.querySelector("#totalPakStu").innerText =  "";
+                document.querySelector("#percentPakStu").innerText =  "";
+                document.querySelector("#gradePercentPakStu").innerText =  "";
+                document.querySelector(".term3Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termOneHistory)){
+                document.querySelector("#term1History").innerText =  "";
+                document.querySelector("#totalHistory").innerText =  "";
+                document.querySelector("#percentHistory").innerText =  "";
+                document.querySelector("#gradePercentHistory").innerText =  "";
+                document.querySelector("#termTotal1").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termTwoHistory)){
+                document.querySelector("#term2History").innerText =  "";
+                document.querySelector("#totalHistory").innerText =  "";
+                document.querySelector("#percentHistory").innerText =  "";
+                document.querySelector("#gradePercentHistory").innerText =  "";
+                document.querySelector(".term2Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(finalHistory)){
+                document.querySelector("#finalHistory").innerText =  "";
+                document.querySelector("#totalHistory").innerText =  "";
+                document.querySelector("#percentHistory").innerText =  "";
+                document.querySelector("#gradePercentHistory").innerText =  "";
+                document.querySelector(".term3Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termOneCompStu)){
+                document.querySelector("#term1CompStu").innerText =  "";
+                document.querySelector("#totalCompStu").innerText =  "";
+                document.querySelector("#percentCompStu").innerText =  "";
+                document.querySelector("#gradePercentCompStu").innerText =  "";
+                document.querySelector("#termTotal1").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termTwoCompStu)){
+                document.querySelector("#term2CompStu").innerText =  "";
+                document.querySelector("#totalCompStu").innerText =  "";
+                document.querySelector("#percentCompStu").innerText =  "";
+                document.querySelector("#gradePercentCompStu").innerText =  "";
+                document.querySelector(".term2Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(finalCompStu)){
+                document.querySelector("#finalCompStu").innerText =  "";
+                document.querySelector("#totalCompStu").innerText =  "";
+                document.querySelector("#percentCompStu").innerText =  "";
+                document.querySelector("#gradePercentCompStu").innerText =  "";
+                document.querySelector(".term3Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termOneArtCraft)){
+                document.querySelector("#term1ArtCraft").innerText =  "";
+                document.querySelector("#totalArtCraft").innerText =  "";
+                document.querySelector("#percentArtCraft").innerText =  "";
+                document.querySelector("#gradePercentArtCraft").innerText =  "";
+                document.querySelector("#termTotal1").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(termTwoArtCraft)){
+                document.querySelector("#term2ArtCraft").innerText =  "";
+                document.querySelector("#totalArtCraft").innerText =  "";
+                document.querySelector("#percentArtCraft").innerText =  "";
+                document.querySelector("#gradePercentArtCraft").innerText =  "";
+                document.querySelector(".term2Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+            else if(isNaN(finalArtCraft)){
+                document.querySelector("#finalArtCraft").innerText =  "";
+                document.querySelector("#totalArtCraft").innerText =  "";
+                document.querySelector("#percentArtCraft").innerText =  "";
+                document.querySelector("#gradePercentArtCraft").innerText =  "";
+                document.querySelector(".term3Total").innerText =  "";
+                document.querySelector(".alltermsTotalMarks").innerText =  "";
+                document.querySelector(".allTermsTotalPercentage").innerText =  "";
+                return false;
+            }
+                    
+
+            let totalPercentage = document.querySelector(".allTermsTotalPercentage").innerText;
+            let marksPercentage = +document.querySelector("#marksPercentage").innerText;
+            let finalPercentage;
+           
+            finalPercentage = +totalPercentage.replace("%","");
+            if(finalPercentage >= 80 && finalPercentage <= 100){
+                document.querySelector("#finalGrade").innerText = "A1"
+                document.querySelector("#totalPerformance").innerText = "Outstanding";
+                document.querySelector("#teacherRemarks").innerText = "Outstanding";
+            } 
+            else if(finalPercentage >= 70 && finalPercentage <= 79.99){
+                document.querySelector("#finalGrade").innerText = "A"
+                document.querySelector("#totalPerformance").innerText = "Excellent";
+                document.querySelector("#teacherRemarks").innerText = "Excellent";
+            } 
+            else if(finalPercentage >= 60 && finalPercentage <= 69.99){
+                document.querySelector("#finalGrade").innerText = "B"
+                document.querySelector("#totalPerformance").innerText = "Very Good";
+                document.querySelector("#teacherRemarks").innerText = "Very Good";
+            } 
+            else if(finalPercentage >= 50 && finalPercentage <= 59.99){
+                document.querySelector("#finalGrade").innerText = "C"
+                document.querySelector("#totalPerformance").innerText = "Good";
+                document.querySelector("#teacherRemarks").innerText = "Good";
+            } 
+            else if(finalPercentage >= 40 && finalPercentage <= 49.99){
+                document.querySelector("#finalGrade").innerText = "D"
+                document.querySelector("#totalPerformance").innerText = "Fair";
+                document.querySelector("#teacherRemarks").innerText = "Fair";
+            } 
+            else if(finalPercentage >= 33 && finalPercentage <= 39.99){
+                document.querySelector("#finalGrade").innerText = "E"
+                document.querySelector("#totalPerformance").innerText = "Satisfactory";
+                document.querySelector("#teacherRemarks").innerText = "Satisfactory";
+            }
+            else{
+                document.querySelector("#finalGrade").innerText = "Fail"
+                document.querySelector("#totalPerformance").innerText = "Fail";
+                document.querySelector("#teacherRemarks").innerText = "Fail";
+            }
+           
+            marksPercentage = finalPercentage;
+            document.querySelector("#marksPercentage").innerText = marksPercentage.toFixed(2) +`${"%"}`;
+
+            //  English    
+            if(termOneEng < 0 || termOneEng > 30){
+                
+                document.querySelector("#term1Eng").style.background = "red";
+                
+                document.querySelector("#totalEng").innerText = "";
+                document.querySelector("#percentEng").innerText = "";
+                document.querySelector("#gradePercentEnglish").innerText = "";
+                document.querySelector("#termTotal1").innerText = "";
+                myFunction30();
+                
+                return false;
+                
+            }
+            else{
+                document.querySelector("#term1Eng").style.background = "white";
+                
+                document.querySelector("#totalEng").innerText = totalEnglish;
+                document.querySelector("#percentEng").innerText = percentEnglish +`${"%"}`;
+            }
+            if(termTwoEng < 0 || termTwoEng > 30){
+                document.querySelector("#term2Eng").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalEng").innerText = "";
+                document.querySelector("#percentEng").innerText = "";
+                document.querySelector("#gradePercentEnglish").innerText = "";
+                document.querySelector(".term2Total").innerText = "";
+                return false;
+                
+            }
+            else{
+                document.querySelector("#term2Eng").style.background = "white";
+                document.querySelector("#totalEng").innerText = totalEnglish;
+                document.querySelector("#percentEng").innerText = percentEnglish +`${"%"}`;
+            }
+            if(finalEng < 0 || finalEng > 40){
+                document.querySelector("#finalEng").style.background = "red";
+                myFunction40();
+                document.querySelector("#totalEng").innerText = "";
+                document.querySelector("#percentEng").innerText = "";
+                document.querySelector("#gradePercentEnglish").innerText = "";
+                document.querySelector(".term3Total").innerText = "";
+                return false;   
+            }
+            else{
+                document.querySelector("#finalEng").style.background = "white";
+                document.querySelector("#totalEng").innerText = totalEnglish;
+                document.querySelector("#percentEng").innerText = percentEnglish +`${"%"}`;
+            }
+
+            // Urdu
+
+            if(termOneUrdu < 0 || termOneUrdu > 30){
+               // alert("Not in the range");
+                document.querySelector("#term1Urdu").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalUrd").innerText = "";
+                document.querySelector("#percentUrdu").innerText = "";
+                document.querySelector("#termTotal1").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term1Urdu").style.background = "white";
+                document.querySelector("#totalUrd").innerText = totalUrdu;
+                document.querySelector("#percentUrdu").innerText = percentUrdu +`${"%"}`;
+            }
+            if(termTwoUrdu < 0 || termTwoUrdu > 30){
+                document.querySelector("#term2Urdu").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalUrd").innerText = "";
+                document.querySelector("#percentUrdu").innerText = "";
+                document.querySelector(".term2Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term2Urdu").style.background = "white";
+                document.querySelector("#totalUrd").innerText = totalUrdu;
+                document.querySelector("#percentUrdu").innerText = percentUrdu +`${"%"}`;
+            }
+            if(finalUrdu < 0 || finalUrdu > 40){
+                document.querySelector("#finalUrdu").style.background = "red";
+                myFunction40();
+                document.querySelector("#totalUrd").innerText = "";
+                document.querySelector("#percentUrdu").innerText = "";
+                document.querySelector(".term3Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#finalUrdu").style.background = "white";
+                document.querySelector("#totalUrd").innerText = totalUrdu;
+                document.querySelector("#percentUrdu").innerText = percentUrdu +`${"%"}`;
+            }
+
+            // Sindhi
+
+            if(termOneSindhi < 0 || termOneSindhi > 30){
+               // alert("Not in the range");
+                document.querySelector("#term1Sindhi").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalSindhi").innerText = "";
+                document.querySelector("#percentSindhi").innerText = "";
+                document.querySelector("#termTotal1").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term1Sindhi").style.background = "white";
+                document.querySelector("#totalSindhi").innerText = totalSindhi;
+                document.querySelector("#percentSindhi").innerText = percentSindhi +`${"%"}`;
+            }
+            if(termTwoSindhi < 0 || termTwoSindhi > 30){
+                document.querySelector("#term2Sindhi").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalSindhi").innerText = "";
+                document.querySelector("#percentSindhi").innerText = "";
+                document.querySelector(".term2Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term2Sindhi").style.background = "white";
+                document.querySelector("#totalSindhi").innerText = totalSindhi;
+                document.querySelector("#percentSindhi").innerText = percentSindhi +`${"%"}`;
+            }
+            if(finalSindhi < 0 || finalSindhi > 40){
+                document.querySelector("#finalSindhi").style.background = "red";
+                myFunction40();
+                document.querySelector("#totalSindhi").innerText = "";
+                document.querySelector("#percentSindhi").innerText = "";
+                document.querySelector(".term3Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#finalSindhi").style.background = "white";
+                document.querySelector("#totalSindhi").innerText = totalSindhi;
+                document.querySelector("#percentSindhi").innerText = percentSindhi +`${"%"}`;
+            }
+
+            // Math
+
+            if(termOneMath < 0 || termOneMath > 30){
+                
+                document.querySelector("#term1Math").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalMath").innerText = "";
+                document.querySelector("#percentMath").innerText = "";
+                document.querySelector("#termTotal1").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term1Math").style.background = "white";
+                document.querySelector("#totalMath").innerText = totalMath;
+                document.querySelector("#percentMath").innerText = percentMath +`${"%"}`;
+            }
+            if(termTwoMath < 0 || termTwoMath > 30){
+                document.querySelector("#term2Math").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalMath").innerText = "";
+                document.querySelector("#percentMath").innerText = "";
+                document.querySelector(".term2Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term2Math").style.background = "white";
+                document.querySelector("#totalMath").innerText = totalMath;
+                document.querySelector("#percentMath").innerText = percentMath +`${"%"}`;
+            }
+            if(finalMath < 0 || finalMath > 40){
+                document.querySelector("#finalMath").style.background = "red";
+                myFunction40();
+                document.querySelector("#totalMath").innerText = "";
+                document.querySelector("#percentMath").innerText = "";
+                document.querySelector(".term3Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#finalMath").style.background = "white";
+                document.querySelector("#totalMath").innerText = totalMath;
+                document.querySelector("#percentMath").innerText = percentMath +`${"%"}`;
+            }
+            
+            //Islamiath
+
+            if(termOneIslamiat < 0 || termOneIslamiat > 30){
+                
+                document.querySelector("#term1Islamiat").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalIslamiat").innerText = "";
+                document.querySelector("#percentIslamiat").innerText = "";
+                document.querySelector("#termTotal1").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term1Islamiat").style.background = "white";
+                document.querySelector("#totalIslamiat").innerText = totalIslamiat;
+                document.querySelector("#percentIslamiat").innerText = percentIslamiat +`${"%"}`;
+            }
+            if(termTwoIslamiat < 0 || termTwoIslamiat > 30){
+                document.querySelector("#term2Islamiat").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalIslamiat").innerText = "";
+                document.querySelector("#percentIslamiat").innerText = "";
+                document.querySelector(".term2Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term2Islamiat").style.background = "white";
+                document.querySelector("#totalIslamiat").innerText = totalIslamiat;
+                document.querySelector("#percentIslamiat").innerText = percentIslamiat +`${"%"}`;
+            }
+            if(finalIslamiat < 0 || finalIslamiat > 40){
+                document.querySelector("#finalIslamiat").style.background = "red";
+                myFunction40();
+                document.querySelector("#totalIslamiat").innerText = "";
+                document.querySelector("#percentIslamiat").innerText = "";
+                document.querySelector(".term3Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#finalIslamiat").style.background = "white";
+                document.querySelector("#totalIslamiat").innerText = totalIslamiat;
+                document.querySelector("#percentIslamiat").innerText = percentIslamiat +`${"%"}`;
+            }
+
+            //Science
+
+            if(termOneScience < 0 || termOneScience > 30){
+                
+                document.querySelector("#term1Science").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalScience").innerText = "";
+                document.querySelector("#percentScience").innerText = "";
+                document.querySelector("#termTotal1").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term1Science").style.background = "white";
+                document.querySelector("#totalScience").innerText = totalScience;
+                document.querySelector("#percentScience").innerText = percentScience +`${"%"}`;
+            }
+            if(termTwoScience < 0 || termTwoScience > 30){
+                document.querySelector("#term2Science").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalScience").innerText = "";
+                document.querySelector("#percentScience").innerText = "";
+                document.querySelector(".term2Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term2Science").style.background = "white";
+                document.querySelector("#totalScience").innerText = totalScience;
+                document.querySelector("#percentScience").innerText = percentScience +`${"%"}`;
+            }
+            if(finalScience < 0 || finalScience > 40){
+                document.querySelector("#finalScience").style.background = "red";
+                myFunction40();
+                document.querySelector("#totalScience").innerText = "";
+                document.querySelector("#percentScience").innerText = "";
+                document.querySelector(".term3Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#finalScience").style.background = "white";
+                document.querySelector("#totalScience").innerText = totalScience;
+                document.querySelector("#percentScience").innerText = percentScience +`${"%"}`;
+            }
+
+            // Pak stu
+        
+        if(termOnePakstu < 0 || termOnePakstu > 30){
+                
+                document.querySelector("#term1Pakstu").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalPakStu").innerText = "";
+                document.querySelector("#percentPakStu").innerText = "";
+                document.querySelector("#termTotal1").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term1Pakstu").style.background = "white";
+                document.querySelector("#totalPakStu").innerText = totalPakstu;
+                document.querySelector("#percentPakStu").innerText = percentPakStu +`${"%"}`;
+            }
+            if(termTwoPakstu < 0 || termTwoPakstu > 30){
+                document.querySelector("#term2Pakstu").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalPakStu").innerText = "";
+                document.querySelector("#percentPakStu").innerText = "";
+                document.querySelector(".term2Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term2Pakstu").style.background = "white";
+                document.querySelector("#totalPakStu").innerText = totalPakstu;
+                document.querySelector("#percentPakStu").innerText = percentPakStu +`${"%"}`;
+            }
+            if(finalPakstu < 0 || finalPakstu > 40){
+                document.querySelector("#finalPakstu").style.background = "red";
+                myFunction40();
+                document.querySelector("#totalPakStu").innerText = "";
+                document.querySelector("#percentPakStu").innerText = "";
+                document.querySelector(".term3Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#finalPakstu").style.background = "white";
+                document.querySelector("#totalPakStu").innerText = totalPakstu;
+                document.querySelector("#percentPakStu").innerText = percentPakStu +`${"%"}`;
+            }
+
+            // History
+
+            if(termOneHistory < 0 || termOneHistory > 30){
+                
+                document.querySelector("#term1History").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalHistory").innerText = "";
+                document.querySelector("#percentHistory").innerText = "";
+                document.querySelector("#termTotal1").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term1History").style.background = "white";
+                document.querySelector("#totalHistory").innerText = totalHistory;
+                document.querySelector("#percentHistory").innerText = percentHistory +`${"%"}`;
+            }
+            if(termTwoHistory < 0 || termTwoHistory > 30){
+                document.querySelector("#term2History").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalHistory").innerText = "";
+                document.querySelector("#percentHistory").innerText = "";
+                document.querySelector(".term2Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term2History").style.background = "white";
+                document.querySelector("#totalHistory").innerText = totalHistory;
+                document.querySelector("#percentHistory").innerText = percentHistory +`${"%"}`;
+            }
+            if(finalHistory < 0 || finalHistory > 40){
+                document.querySelector("#finalHistory").style.background = "red";
+                myFunction40();
+                document.querySelector("#totalHistory").innerText = "";
+                document.querySelector("#percentHistory").innerText = "";
+                document.querySelector(".term3Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#finalHistory").style.background = "white";
+                document.querySelector("#totalHistory").innerText = totalHistory;
+                document.querySelector("#percentHistory").innerText = percentHistory +`${"%"}`;
+            }
+
+            // Comp stu
+
+            if(termOneCompStu < 0 || termOneCompStu > 30){
+                
+                document.querySelector("#term1CompStu").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalCompStu").innerText = "";
+                document.querySelector("#percentCompStu").innerText = "";
+                document.querySelector("#termTotal1").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term1CompStu").style.background = "white";
+                document.querySelector("#totalCompStu").innerText = totalCompstu;
+                document.querySelector("#percentCompStu").innerText = percentCompStu +`${"%"}`;
+            }
+            if(termTwoCompStu < 0 || termTwoCompStu > 30){
+                document.querySelector("#term2CompStu").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalCompStu").innerText = "";
+                document.querySelector("#percentCompStu").innerText = "";
+                document.querySelector(".term2Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term2CompStu").style.background = "white";
+                document.querySelector("#totalCompStu").innerText = totalCompstu;
+                document.querySelector("#percentCompStu").innerText = percentCompStu +`${"%"}`;
+            }
+            if(finalCompStu < 0 || finalCompStu > 40){
+                document.querySelector("#finalCompStu").style.background = "red";
+                myFunction40();
+                document.querySelector("#totalCompStu").innerText = "";
+                document.querySelector("#percentCompStu").innerText = "";
+                document.querySelector(".term3Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#finalCompStu").style.background = "white";
+                document.querySelector("#totalCompStu").innerText = totalCompstu ;
+                document.querySelector("#percentCompStu").innerText = percentCompStu +`${"%"}`;
+            }
+
+            // Art
+
+            if(termOneArtCraft < 0 || termOneArtCraft > 30){
+                
+                document.querySelector("#term1ArtCraft").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalArtCraft").innerText = "";
+                document.querySelector("#percentArtCraft").innerText = "";
+                document.querySelector("#termTotal1").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#term1ArtCraft").style.background = "white";
+                document.querySelector("#totalArtCraft").innerText = totalArtCraft ;
+                document.querySelector("#percentArtCraft").innerText = percentArtCraft +`${"%"}`;
+            }
+            if(termTwoArtCraft < 0 || termTwoArtCraft > 30){
+                document.querySelector("#term2ArtCraft").style.background = "red";
+                myFunction30();
+                document.querySelector("#totalArtCraft").innerText = "";
+                document.querySelector("#percentArtCraft").innerText = "";
+                document.querySelector(".term2Total").innerText = "";
+                
+                return false;
+            }
+            else{
+                document.querySelector("#term2ArtCraft").style.background = "white";
+                document.querySelector("#totalArtCraft").innerText = totalArtCraft;
+                document.querySelector("#percentArtCraft").innerText = percentArtCraft +`${"%"}`;
+            }
+            if(finalArtCraft < 0 || finalArtCraft > 40){
+                document.querySelector("#finalArtCraft").style.background = "red";
+                myFunction40();
+                document.querySelector("#totalArtCraft").innerText = "";
+                document.querySelector("#percentArtCraft").innerText = "";
+                document.querySelector(".term3Total").innerText = "";
+                return false;
+            }
+            else{
+                document.querySelector("#finalArtCraft").style.background = "white";
+                document.querySelector("#totalArtCraft").innerText = totalArtCraft;
+                document.querySelector("#percentArtCraft").innerText = percentArtCraft +`${"%"}`;
+            }
+            
+            document.querySelector("#percentEng").innerText = percentEnglish +`${"%"}`;
+            document.querySelector("#percentUrdu").innerText = percentUrdu +`${"%"}`;
+            document.querySelector("#percentSindhi").innerText = percentSindhi + `${"%"}`;
+            document.querySelector("#percentMath").innerText = percentMath + `${"%"}`;
+            document.querySelector("#percentIslamiat").innerText = percentIslamiat + `${"%"}`;
+            document.querySelector("#percentScience").innerText = percentScience + `${"%"}`;
+            document.querySelector("#percentPakStu").innerText = percentPakStu + `${"%"}`;
+            document.querySelector("#percentHistory").innerText = percentHistory + `${"%"}`;
+            document.querySelector("#percentCompStu").innerText = percentCompStu + `${"%"}`;
+            document.querySelector("#percentArtCraft").innerText = percentArtCraft + `${"%"}`;
+
+            
+            allotingGrades();
+                        
+            
+            function allotingGrades(){
+              
+                if(percentEnglish >= 80 && percentEnglish <= 100){
+                  
+                    document.querySelector("#gradePercentEnglish").innerText = "A1";     
+                }
+                
+                if(percentUrdu >= 80 && percentUrdu <= 100){
+                  
+                    document.querySelector("#gradePercentUrdu").innerText = "A1";     
+                }
+               
+                if(percentSindhi >= 80 && percentSindhi <= 100){
+                  
+                    document.querySelector("#gradePercentSindhi").innerText = "A1";     
+                }
+                
+                if(percentMath >= 80 && percentMath <= 100){
+                  
+                  document.querySelector("#gradePercentMath").innerText = "A1";     
+                }
+               
+                if(percentIslamiat >= 80 && percentIslamiat <= 100){
+                  
+                  document.querySelector("#gradePercentIslamiat").innerText = "A1";     
+                }
+                
+                if(percentScience >= 80 && percentScience <= 100){
+                  
+                  document.querySelector("#gradePercentScience").innerText = "A1";     
+                }
+                
+                if(percentPakStu >= 80 && percentPakStu <= 100){
+                  
+                  document.querySelector("#gradePercentPakStu").innerText = "A1";     
+                }
+               
+                if(percentHistory >= 80 && percentHistory <= 100){
+                  
+                  document.querySelector("#gradePercentHistory").innerText = "A1";     
+                }
+                
+                if(percentCompStu >= 80 && percentCompStu <= 100){
+                  
+                  document.querySelector("#gradePercentCompStu").innerText = "A1";     
+                }
+               
+                if(percentArtCraft >= 80 && percentArtCraft <= 100){
+                  
+                  document.querySelector("#gradePercentArtCraft").innerText = "A1";     
+                }
+
+                // Grade A
+              
+                if(percentEnglish >= 70 && percentEnglish <= 79.99){
+                  
+                  document.querySelector("#gradePercentEnglish").innerText = "A";     
+                }
+                
+                if(percentUrdu >= 70 && percentUrdu <= 79.99){
+                
+                  document.querySelector("#gradePercentUrdu").innerText = "A";     
+                }
+                
+                if(percentSindhi >= 70 && percentSindhi <= 79.99){
+                
+                  document.querySelector("#gradePercentSindhi").innerText = "A";     
+                }
+                
+                if(percentMath >= 70 && percentMath <= 79.99){
+                
+                document.querySelector("#gradePercentMath").innerText = "A";     
+                }
+                
+                if(percentIslamiat >= 70 && percentIslamiat <= 79.99){
+                
+                document.querySelector("#gradePercentIslamiat").innerText = "A";     
+                }
+                
+                if(percentScience >= 70 && percentScience <= 79.99){
+                
+                document.querySelector("#gradePercentScience").innerText = "A";     
+                }
+                
+                if(percentPakStu >= 70 && percentPakStu <= 79.99){
+                
+                document.querySelector("#gradePercentPakStu").innerText = "A";     
+                }
+                
+                if(percentHistory >= 70 && percentHistory <= 79.99){
+                
+                document.querySelector("#gradePercentHistory").innerText = "A";     
+                }
+                
+                if(percentCompStu >= 70 && percentCompStu <= 79.99){
+                
+                document.querySelector("#gradePercentCompStu").innerText = "A";     
+               }
+              
+              if(percentArtCraft >= 70 && percentArtCraft <= 79.99){
+                
+                document.querySelector("#gradePercentArtCraft").innerText = "A";     
+              }  
+
+              // Grade B
+              
+              if(percentEnglish >= 60 && percentEnglish <= 69.99){
+                  
+                  document.querySelector("#gradePercentEnglish").innerText = "B";     
+                }
+                
+                if(percentUrdu >= 60 && percentUrdu <= 69.99){
+                
+                  document.querySelector("#gradePercentUrdu").innerText = "B";     
+                }
+                
+                if(percentSindhi >= 60 && percentSindhi <= 69.99){
+                
+                  document.querySelector("#gradePercentSindhi").innerText = "B";     
+                }
+                
+                if(percentMath >= 60 && percentMath <= 69.99){
+                
+                document.querySelector("#gradePercentMath").innerText = "B";     
+                }
+                
+                if(percentIslamiat >= 60 && percentIslamiat <= 69.99){
+                
+                document.querySelector("#gradePercentIslamiat").innerText = "B";     
+                }
+                
+                if(percentScience >= 60 && percentScience <= 69.99){
+                
+                document.querySelector("#gradePercentScience").innerText = "B";     
+                }
+                
+                if(percentPakStu >= 60 && percentPakStu <= 69.99){
+                
+                document.querySelector("#gradePercentPakStu").innerText = "B";     
+                }
+                
+                if(percentHistory >= 60 && percentHistory <= 69.99){
+                
+                document.querySelector("#gradePercentHistory").innerText = "B";     
+                }
+                
+                if(percentCompStu >= 60 && percentCompStu <= 69.99){
+                
+                document.querySelector("#gradePercentCompStu").innerText = "B";     
+               }
+              
+              if(percentArtCraft >= 60 && percentArtCraft <= 69.99){
+                
+                document.querySelector("#gradePercentArtCraft").innerText = "B";     
+              }  
+
+              // Grade C
+              
+              if(percentEnglish >= 50 && percentEnglish <= 59.99){
+                  
+                  document.querySelector("#gradePercentEnglish").innerText = "C";     
+                }
+                
+                if(percentUrdu >= 50 && percentUrdu <= 59.99){
+                
+                  document.querySelector("#gradePercentUrdu").innerText = "C";     
+                }
+                
+                if(percentSindhi >= 50 && percentSindhi <= 59.99){
+                
+                  document.querySelector("#gradePercentSindhi").innerText = "C";     
+                }
+                
+                if(percentMath >= 50 && percentMath <= 59.99){
+                
+                document.querySelector("#gradePercentMath").innerText = "C";     
+                }
+                
+                if(percentIslamiat >= 50 && percentIslamiat <= 59.99){
+                
+                document.querySelector("#gradePercentIslamiat").innerText = "C";     
+                }
+                
+                if(percentScience >= 50 && percentScience <= 59.99){
+                
+                document.querySelector("#gradePercentScience").innerText = "C";     
+                }
+                
+                if(percentPakStu >= 50 && percentPakStu <= 59.99){
+                
+                document.querySelector("#gradePercentPakStu").innerText = "C";     
+                }
+                
+                if(percentHistory >= 50 && percentHistory <= 59.99){
+                
+                document.querySelector("#gradePercentHistory").innerText = "C";     
+                }
+                
+                if(percentCompStu >= 50 && percentCompStu <= 59.99){
+                
+                document.querySelector("#gradePercentCompStu").innerText = "C";     
+               }
+              
+              if(percentArtCraft >= 50 && percentArtCraft <= 59.99){
+                
+                document.querySelector("#gradePercentArtCraft").innerText = "C";     
+              }  
+
+              // Grade D
+              
+              if(percentEnglish >= 40 && percentEnglish <= 49.99){
+                  
+                  document.querySelector("#gradePercentEnglish").innerText = "D";     
+                }
+                
+                if(percentUrdu >= 40 && percentUrdu <= 49.99){
+                
+                  document.querySelector("#gradePercentUrdu").innerText = "D";     
+                }
+                
+                if(percentSindhi >= 40 && percentSindhi <= 49.99){
+                
+                  document.querySelector("#gradePercentSindhi").innerText = "D";     
+                }
+                
+                if(percentMath >= 40 && percentMath <= 49.99){
+                
+                document.querySelector("#gradePercentMath").innerText = "D";     
+                }
+                
+                if(percentIslamiat >= 40 && percentIslamiat <= 49.99){
+                
+                document.querySelector("#gradePercentIslamiat").innerText = "D";     
+                }
+                
+                if(percentScience >= 40 && percentScience <= 49.99){
+                
+                document.querySelector("#gradePercentScience").innerText = "D";     
+                }
+                
+                if(percentPakStu >= 40 && percentPakStu <= 49.99){
+                
+                document.querySelector("#gradePercentPakStu").innerText = "D";     
+                }
+                
+                if(percentHistory >= 40 && percentHistory <= 49.99){
+                
+                document.querySelector("#gradePercentHistory").innerText = "D";     
+                }
+                
+                if(percentCompStu >= 40 && percentCompStu <= 49.99){
+                
+                document.querySelector("#gradePercentCompStu").innerText = "D";     
+               }
+              
+              if(percentArtCraft >= 40 && percentArtCraft <= 49.99){
+                
+                document.querySelector("#gradePercentArtCraft").innerText = "D";     
+              }  
+
+              // Grade E
+              
+              if(percentEnglish >= 33 && percentEnglish <= 39.99){
+                  
+                  document.querySelector("#gradePercentEnglish").innerText = "E";     
+                }
+                
+                if(percentUrdu >= 33 && percentUrdu <= 39.99){
+                
+                  document.querySelector("#gradePercentUrdu").innerText = "E";     
+                }
+                
+                if(percentSindhi >= 33 && percentSindhi <= 39.99){
+                
+                  document.querySelector("#gradePercentSindhi").innerText = "E";     
+                }
+                
+                if(percentMath >= 33 && percentMath <= 39.99){
+                
+                document.querySelector("#gradePercentMath").innerText = "E";     
+                }
+                
+                if(percentIslamiat >= 33 && percentIslamiat <= 39.99){
+                
+                document.querySelector("#gradePercentIslamiat").innerText = "E";     
+                }
+                
+                if(percentScience >= 33 && percentScience <= 39.99){
+                
+                document.querySelector("#gradePercentScience").innerText = "E";     
+                }
+                
+                if(percentPakStu >= 33 && percentPakStu <= 39.99){
+                
+                document.querySelector("#gradePercentPakStu").innerText = "E";     
+                }
+                
+                if(percentHistory >= 33 && percentHistory <= 39.99){
+                
+                document.querySelector("#gradePercentHistory").innerText = "E";     
+                }
+                
+                if(percentCompStu >= 33 && percentCompStu <= 39.99){
+                
+                document.querySelector("#gradePercentCompStu").innerText = "E";     
+               }
+              
+              if(percentArtCraft >= 33 && percentArtCraft <= 39.99){
+                
+                document.querySelector("#gradePercentArtCraft").innerText = "E";     
+              }  
+
+              // Grade Fail
+              
+               if(percentEnglish >= 0.1 && percentEnglish <= 32.99){
+                  
+                  document.querySelector("#gradePercentEnglish").innerText = "Fail"; 
+                    
+                }
+                else{
+                    document.querySelector("#gradePercentEnglish").style.background = "white";   
+                }
+
+                if(percentUrdu >= 0.1 && percentUrdu <= 32.99){
+                
+                  document.querySelector("#gradePercentUrdu").innerText = "Fail";  
+                   
+                }
+                else{
+                    document.querySelector("#gradePercentUrdu").style.background = "white";   
+                }
+                
+                if(percentSindhi >= 0.1 && percentSindhi <= 32.99){
+                
+                  document.querySelector("#gradePercentSindhi").innerText = "Fail";  
+                  
+                }
+                else{
+                    document.querySelector("#gradePercentSindhi").style.background = "white";   
+                }
+                
+                if(percentMath >= 0.1 && percentMath <= 32.99){
+                
+                document.querySelector("#gradePercentMath").innerText = "Fail"; 
+               
+                }
+                else{
+                    document.querySelector("#gradePercentMath").style.background = "white";   
+                }
+                
+                if(percentIslamiat >= 0.1 && percentIslamiat <= 32.99){
+                
+                document.querySelector("#gradePercentIslamiat").innerText = "Fail"; 
+                  
+                }
+                else{
+                    document.querySelector("#gradePercentIslamiat").style.background = "white";   
+                }
+                
+                if(percentScience >= 0.1 && percentScience <= 32.99){
+                
+                document.querySelector("#gradePercentScience").innerText = "Fail"; 
+                   
+                }
+                else{
+                    document.querySelector("#gradePercentScience").style.background = "white";   
+                }
+                
+                if(percentPakStu >= 0.1 && percentPakStu <= 32.99){
+                
+                document.querySelector("#gradePercentPakStu").innerText = "Fail"; 
+                    
+                }
+                else{
+                    document.querySelector("#gradePercentPakStu").style.background = "white";   
+                }
+                
+                if(percentHistory >= 0.1 && percentHistory <= 32.99){
+                
+                document.querySelector("#gradePercentHistory").innerText = "Fail"; 
+                   
+                }
+                else{
+                    document.querySelector("#gradePercentHistory").style.background = "white";   
+                }
+                
+                if(percentCompStu >= 0.1 && percentCompStu <= 32.99){
+                
+                document.querySelector("#gradePercentCompStu").innerText = "Fail"; 
+                 
+               }
+               else{
+                    document.querySelector("#gradePercentCompStu").style.background = "white";   
+                }
+              
+              if(percentArtCraft >= 0.1 && percentArtCraft <= 32.99){
+                
+                document.querySelector("#gradePercentArtCraft").innerText = "Fail"; 
+                  
+              }  
+              else{
+                    document.querySelector("#gradePercentArtCraft").style.background = "white";   
+                }
+                
+        } 
+        let signatures = document.querySelectorAll(".sign");
+        if(numOfDaysPresent >= 130 && numOfDaysPresent <= 260){ 
+              
+               signatures[0].style.display = "block";
+               signatures[1].style.display = "block";
+               signatures[2].style.display = "block";
+            }
+            else{
+               signatures = document.querySelectorAll(".sign");
+               signatures[0].style.display = "none";
+               signatures[1].style.display = "none";
+               signatures[2].style.display = "none";
+            }    
+ }
+     
+
+        let x = document.querySelector(".alert");
+        x.style.display = 'none';
+        function myFunction30() {
+            x = document.querySelector(".alert");
+            if (setTimeout(function(){ x.style.display = "none"; }, 1500)) {
+                x.style.display = "block";
+                
+            } else {
+                x.style.display = "none";
+             }
+        }
+
+        let x1 = document.querySelector(".alert40");
+        x1.style.display = 'none';
+        function myFunction40() {
+            x1 = document.querySelector(".alert40");
+            if (setTimeout(function(){ x1.style.display = "none"; }, 1500)) {
+                x1.style.display = "block";
+                
+            } else {
+                x1.style.display = "none";
+             }
+        }     
+            
+        </script>
+        
+    
+</body>
+</html>
