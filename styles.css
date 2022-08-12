@@ -352,23 +352,47 @@ table, th, td {
     padding-bottom: 11px;
 }
 #abKhan{
-    position: absolute;
-    left: 38px;
-    top: 108px;
-    width: 210px; 
+    width: 210px;
+    margin-left: 10%;
 }
 #nomanKhan{
-    position: absolute;
-    left: 400px;
-    top: 91px;
-    width: 161px;   
+    width: 163px;
+    margin-left: 15%;
 }
 #masoodAhmed{
-    position: absolute;
-    left: 722PX;
-    top: 107px;
-    width: 161px; 
+    width: 210px;
+    margin-left: 10%;
 }
 .sign{
   display: none;
+}
+#firstSign{
+    border: 2px solid black;
+    width: 26%;
+    margin-left: 3.5%;
+    margin-bottom: 1%;
+    display: inline-block;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+#secondSign {
+    border: 1px solid black;
+    width: 26%;
+    margin-left: 6%;
+    margin-bottom: 1%;
+    display: inline-block;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+#thirdSign{
+    border: 1px solid black;
+    width: 26%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    display: inline-block;
+    border-right: none;
+    border-left: none;
+    border-top: none;
 }
